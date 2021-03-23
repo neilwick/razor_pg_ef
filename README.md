@@ -1,1 +1,1 @@
-# razor_pg_ef
+# razor-pg-ef
