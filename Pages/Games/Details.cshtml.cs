@@ -33,7 +33,7 @@ namespace razor_pg_ef.Pages.Games
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             // Message += Request.QueryString;
-            Message += " It is " + Request.Query["msg"];
+            // Message += Request.Query["msg"];
 
             _logger.Log(LogLevel.Information, Request.QueryString.ToString());
 
@@ -41,12 +41,6 @@ namespace razor_pg_ef.Pages.Games
             {
                 return NotFound();
             }
-
-            // Message += msg;
-
-            // if (date != null) {
-            //     Message += date.Value.ToString("yyy-MM-dd");
-            // }
 
             Game = await _context.Game.FirstOrDefaultAsync(m => m.GameID == id);
 
